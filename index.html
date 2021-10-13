@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiple Visualisations | An Example</title>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <h2>A chloropleth map of the world showing the unemployment rate in 2020</h2>
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis1" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+        <br>
+
+            <hr class="hr3">
+
+            <h2>Change in the GDP growth rate over the years</h2>
+            <!-- pure grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="vis2" class="vis-container"></div>
+                </div>
+            </div>
+            <!-- end pure grid group -->
+            <br>
+            
+            <hr class="hr3">
+
+            <h2>Change in the Unemployment rate over the years</h2>
+            <!-- pure grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="vis3" class="vis-container"></div>
+                </div>
+            </div>
+            <!-- end pure grid group -->
+            <br>
+            
+            <hr class="hr4">
+
+            <h2>GDP VS Unemployment</h2>
+            <!-- pure grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="vis4" class="vis-container"></div>
+                </div>
+            </div>
+            <!-- end pure grid group -->
+            <br>
+
+    </div>
+
+
+    <script type="text/javascript">
+        var specVis1 = "choropleth_map.vg.json";
+        vegaEmbed('#vis1', specVis1);
+
+        var specVis2 = "gdpline.vg.json";
+        vegaEmbed('#vis2', specVis2);
+        
+        var specVis3 = "unemployment.vg.json";
+        vegaEmbed('#vis3', specVis3);
+        
+        var specVis4 = "gdpvsunemployment.vg.json";
+        vegaEmbed('#vis4', specVis4);
+
+        print(brush)
+    </script>
+</body>
+
+</html>

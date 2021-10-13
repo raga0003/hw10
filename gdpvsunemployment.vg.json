@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Utkarsh-Monash/3179-Repo/main/bubble_plot.csv"
+  },
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "field": "GDP per capita (current US$)(2020)",
+      "type": "quantitative",
+      "title": "GDP per capita"
+    },
+    "y": {
+      "field": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "type": "quantitative"
+    },
+    "color": {"field": "Region", "type": "nominal"},
+    "size": {"field": "Population", "type": "quantitative"}
+  },
+  "config": {}
+}
